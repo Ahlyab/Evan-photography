@@ -22,9 +22,9 @@ const options = {
       {
         url: `http://localhost:${port}`,
       },
-      //   {
-      //     url: "https://artarena.onrender.com/",
-      //   },
+      {
+        url: "https://evan-photography.onrender.com/",
+      },
     ],
   },
   apis: ["./docs/*.js"],
