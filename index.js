@@ -27,7 +27,7 @@ const options = {
       },
     ],
   },
-  apis: ["./docs/*.js"],
+  apis: ["./Docs/*.js"],
 };
 
 app.use(cors());
