@@ -6,8 +6,8 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerJSDoc = require("swagger-jsdoc");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const users = require("./Routes/users");
 const cookieParser = require("cookie-parser");
+const AdminRoutes = require("./Routes/AdminRoutes");
 const port = process.env.PORT || 3000; // Use port from env or default to 3000
 
 const options = {
@@ -40,6 +40,8 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.get("/", (req, res) => {
   res.redirect("/api-docs");
 });
+
+app.use("/api/admin", AdminRoutes);
 
 mongoose
   .connect(
